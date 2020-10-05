@@ -1,0 +1,24 @@
+---
+layout: defaultindex.liquid
+title: butamwahomepage
+morelink: url
+data: feched
+size: 1
+alias: character
+---
+
+{% if mydog %}
+
+<img src="{{ mydog }}" alt="" />
+{% endif %}
+<h1>{{ character.name }}</h1>
+<p>{{ character.spacies }}</p>
+<p>{{ character.gender }}</p>
+<img src="{{ character.image }}" alt="" />
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium earum in
+  reiciendis alias, labore dolore nesciunt adipisci animi excepturi nam
+  perferendis dolorem eius illo quos sequi consequuntur provident obcaecati.
+  Quam.
+</p>
+<button class="btn btn-primary btn-lg">button</button>

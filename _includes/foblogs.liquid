@@ -1,0 +1,38 @@
+---
+layout: defaultindex.liquid
+---
+
+<img data-src="{{ image }}" />
+<span
+  >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem cupiditate
+  expedita distinctio nulla facere? Reprehenderit saepe deleniti possimus unde
+  maxime adipisci eos quas officiis assumenda, quibusdam tenetur, provident
+  facilis nobis.</span
+>
+<img data-src="{{ imagescover }}" alt="" />
+
+{{ content }}
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <span>be with us on social media</span>
+      <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+      <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+      <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
+      <i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>
+      <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+    </div>
+  </div>
+  <h3>other blogs</h3>
+  <div class="row">
+    {% for datas in collections.blog %} {% if datas.data.title != title %}
+    <div class="col-lg-4">
+      <img height="125" src="{{ datas.data.image }}" alt="" class="" />
+    </div>
+    <div class="col-lg-6">
+      <h5>{{ datas.data.title }}</h5>
+      <p>{{ datas.data.summary }} <a href="{{ datas.url }}">more</a></p>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
